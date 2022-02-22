@@ -1,0 +1,263 @@
+/* Tienda */
+:root{
+    --blanco: #FFFFFF;
+    --negro: #000000;
+    --primario: #42F0DE;
+    --secundario: #9e9e9e;
+    --letra:'Noto Sans JP', sans-serif;
+}
+
+/*Globales*/
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;/*Hack BoxModel inicia*/
+    scroll-snap-type: y mandatory;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;/*Termina*/
+}
+
+body {
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: var(--letra);
+    font-weight: normal;
+    background-image: linear-gradient(to bottom, #9e9e9e 0%, #d3d3d3 100%);/*Color degradado*/
+}
+
+p{
+    font-size: 1.8rem;
+    font-family: var(--letra);
+    color: var(--negro);
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    width: 100%;
+}
+
+.contenedor_s{
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+h1,h2,h3{
+    text-align: center;
+    color: var(--blanco)
+}
+
+h1{font-size: 4rem; color: #ebe712; -webkit-text-stroke: .5px black; }
+h2{font-size: 3.2rem;}
+h2{font-size: 2.4rem;}
+
+
+/*header*/
+.headerstore{
+    display: flex;
+    justify-content: center;
+}
+
+.headerstore__logo{
+    margin: 3rem 0;
+}
+
+/*footer*/
+.footerstore{
+    background-color: var(--blanco);
+    padding: 1rem 0;
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 10px;
+}
+
+.footerstore__text {
+    text-align: center;
+    font-size: 9px;
+}
+
+/*Navegacion*/
+.navstore{
+    background-color: var(--negro);
+    
+    display: flex;
+    justify-content: center;
+    /*gap: 3rem;*/
+}
+
+.navstore__link{
+    color: var(--blanco);
+    font-size: 2rem;
+    padding: 1rem ;
+    margin-right: 2rem;
+}
+
+.navstore__link:last-of-type {
+    margin-right: 0;
+}
+
+.navstore__link--activo,
+.navstore__link:hover{
+    background-color: var(--primario );
+    color: var(--negro);
+}
+
+
+/*Producto*/
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+@media (min-width: 768px){
+    .grid{
+        display: grid;/*Llamas a grid*/
+        grid-template-columns: repeat(3, 1fr);/*divides en 3 columnas*/
+    }
+}
+
+.producto{
+    background-color: var(--primario);
+    padding: 1rem;
+    
+}
+
+.producto__nombre {
+    font-size: 4rem;
+}
+
+.producto__precio{
+    font-size: 2.8rem;
+}
+
+.producto__nombre,
+.producto__precio{
+    font-family: var(--letra);
+    margin: 1rem 0;
+    text-align: center;
+    line-height: 1.2;
+}
+
+
+/*Graficos*/
+.grafico{
+    min-height: 30rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-column: 1 / 3;
+}
+
+.grafico--camisa{
+    grid-row: 2 / 3;
+    background-image: url(/store/productos/grafico1.jpg);
+}
+
+.grafico--node{
+    grid-row: 8 / 9;
+    background-image: url(/store/productos/grafico2.jpg);
+}
+
+@media (min-width: 768px){
+    .grafico--node{
+        grid-row: 5 / 6;
+        grid-column: 2 / 4;
+        
+    }
+}
+
+
+/*Nosotros*/
+.nosotros{
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+}
+
+@media(min-width:768px){
+    .nosotros{
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+    }
+}
+
+.nosotros__imagen{
+    grid-row: 1 / 2;
+}
+
+@media(min-width:768px){
+    .nosotros__imagen{
+        grid-column: 2 / 3;
+    }
+}
+
+.bloques{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+@media(min-width:768px){
+    .bloques{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.bloque{
+    text-align: center;
+}
+
+.bloque__titulo{
+    margin:0;
+}
+
+@media(min-width:768px){
+    .bloque__imagen{
+        width: 70%;
+    }
+}
+
+
+/*Pagina del preducto*/
+@media(min-width:768px){
+    .camisa{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+    }
+}
+
+.formulario{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.formulario__campo{
+    border: 1rem solid var(--negro);
+    background-color: transparent;
+    color: var(--negro);
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 1rem;
+    appearance: none;
+}
+
+.formulario__submit{
+    background-color: var(--negro);
+    color: var(--blanco);
+    border: none;
+    font-size: 2rem;
+    padding: 2rem;
+    transition: background-color .3s ease;
+    grid-column: 1 / 3;
+}
+
+.formulario__submit:hover{
+    cursor: pointer;
+    background-color: var(--primario);
+    color: var(--negro)
+} 

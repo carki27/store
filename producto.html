@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda</title>
+    <title>Document</title>
+    <link rel="preload" href="../css/normalize.css" as="style">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;500;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="style.css" as="style">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body class="store">
+   <header class="headerstore">
+       <a href="index.html">
+           <img class="headerstore__logo" src="productos/logo.png" alt="Logotipo">
+       </a>
+   </header>
+
+   <nav class="navstore">
+       <a class="navstore__link " href="index.html">Tienda</a>
+       <a class="navstore__link navstore__link--activo" href="nosotros.html">Nosotros</a>
+   </nav>
+
+    <main class="contenedor_s">
+        <h1>ReactJS</h1>
+        <div class="camisa">
+            <img class="camisa__imagen" src="productos/3.jpg" alt="imagen">
+            <div class="camisa__contenido">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dui neque, mattis et fermentum a, eleifend ut augue. Suspendisse potenti. Phasellus rhoncus facilisis fermentum. Aenean bibendum dolor libero, et rhoncus</p>
+                
+                <form class="formulario">
+                    <select class="formulario__campo">
+                        <option disabled selected>-- Seleccionar Talla--</option>
+                        <option>Chica</option>
+                        <option>Mediana</option>
+                    </select>
+                    <input class="formulario__campo" type="number" placeholder="Cantidad" min="1">
+                    <input class="formulario__submit" type="submit" value="Agregar al Carrito">
+                </form>
+
+            </div>
+        </div>
+    </main>
+
+
+</body>
+<footer class="footerstore">
+    <p class="footerstore__texto">Todos los derechos reservados Carlos Ruiz. Delete.com.mx</p>
+</footer>   
+</html>
